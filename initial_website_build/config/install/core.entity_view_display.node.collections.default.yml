@@ -1,0 +1,89 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.collections.field_accession_date
+    - field.field.node.collections.field_accession_number
+    - field.field.node.collections.field_description
+    - field.field.node.collections.field_image
+    - node.type.collections
+  module:
+    - datetime
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      path: modules/ds
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - links
+        - 'dynamic_token_field:node-table_heading'
+        - field_accession_number
+        - field_accession_date
+        - field_description
+        - 'dynamic_token_field:node-table_footer'
+        - field_image
+    fields:
+      'dynamic_token_field:node-table_footer':
+        plugin_id: 'dynamic_token_field:node-table_footer'
+        weight: 5
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-table_heading':
+        plugin_id: 'dynamic_token_field:node-table_heading'
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.collections.default
+targetEntityType: node
+bundle: collections
+mode: default
+content:
+  field_accession_date:
+    weight: 3
+    label: inline
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_plain
+  field_accession_number:
+    weight: 2
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_description:
+    weight: 4
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 6
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

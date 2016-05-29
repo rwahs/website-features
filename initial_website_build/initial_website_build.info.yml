@@ -1,0 +1,29 @@
+name: 'Initial website build'
+description: 'This is the first build of the RWAHS site, it is not refined yet and still requires considerable cleaning up of theming and content, but all the basic config has been completed.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - ckeditor
+  - comment
+  - datetime
+  - ds
+  - editor
+  - field
+  - file
+  - filter
+  - image
+  - jssor
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - rdf
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_slideshow
+version: '0.1'

@@ -1,0 +1,23 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.top-menu-secondary-sites
+  module:
+    - system
+  theme:
+    - bstweaks
+id: topmenusecondarysites
+theme: bstweaks
+region: '-1'
+weight: -6
+provider: null
+plugin: 'system_menu_block:top-menu-secondary-sites'
+settings:
+  id: 'system_menu_block:top-menu-secondary-sites'
+  label: 'Top Menu Secondary Sites'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

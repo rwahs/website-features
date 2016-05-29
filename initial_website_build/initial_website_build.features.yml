@@ -1,0 +1,4 @@
+excluded:
+  - block.block.bstweaks_views_block__jssor_sample_slider_block_1
+  - block.block.views_block__jssor_sample_slider_block_1
+required: true

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_reference
+    - node.type.activity
+    - node.type.article
+    - node.type.collections
+    - node.type.home_page_slider
+    - node.type.page
+id: node.home_page_slider.field_reference
+field_name: field_reference
+entity_type: node
+bundle: home_page_slider
+label: Reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      activity: activity
+      article: article
+      page: page
+      collections: collections
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: activity
+field_type: entity_reference
