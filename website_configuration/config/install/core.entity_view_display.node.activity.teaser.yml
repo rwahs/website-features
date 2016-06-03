@@ -1,0 +1,114 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.activity.field_accession_date
+    - field.field.node.activity.field_booking_information
+    - field.field.node.activity.field_cost
+    - field.field.node.activity.field_description
+    - field.field.node.activity.field_event_type
+    - field.field.node.activity.field_image
+    - node.type.activity
+  module:
+    - datetime
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      path: modules/ds
+      library: ''
+      disable_css: false
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_accession_date
+        - field_description
+        - field_event_type
+        - node_link
+    fields:
+      node_link:
+        plugin_id: node_link
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          'link text': 'View event details'
+          'link class': 'btn btn-primary'
+          wrapper: p
+          class: btn-bg
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: no-top-padding
+id: node.activity.teaser
+targetEntityType: node
+bundle: activity
+mode: teaser
+content:
+  field_accession_date:
+    type: datetime_custom
+    weight: 1
+    label: inline
+    settings:
+      timezone_override: Australia/Brisbane
+      date_format: 'h:ia - d/m/Y'
+    third_party_settings: {  }
+  field_booking_information:
+    type: text_default
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_cost:
+    type: string
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_description:
+    type: text_trimmed
+    weight: 2
+    label: inline
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+  field_event_type:
+    type: entity_reference_label
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 16
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

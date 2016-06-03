@@ -1,0 +1,30 @@
+name: 'Website Configuration'
+description: 'This feature contains the base configuration of the RWAHS site'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - block_content
+  - ckeditor
+  - comment
+  - datetime
+  - ds
+  - editor
+  - field
+  - file
+  - filter
+  - image
+  - initial_website_build
+  - jssor
+  - menu_ui
+  - node
+  - path
+  - pathauto
+  - rdf
+  - system
+  - taxonomy
+  - text
+  - user
+  - views
+  - views_slideshow
+version: '0.1'

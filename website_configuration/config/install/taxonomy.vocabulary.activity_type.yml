@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Activity type'
+vid: activity_type
+description: 'Used to classify the types of events held by the society'
+hierarchy: 0
+weight: 0

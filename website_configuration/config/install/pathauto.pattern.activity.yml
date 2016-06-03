@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: activity
+label: Activity
+type: 'canonical_entities:node'
+pattern: '/activities/[node:title]'
+selection_criteria:
+  d53bff5a-034d-4509-9bf9-3ab26873c638:
+    id: node_type
+    bundles:
+      activity: activity
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d53bff5a-034d-4509-9bf9-3ab26873c638
+selection_logic: and
+weight: -5
+relationships: {  }
